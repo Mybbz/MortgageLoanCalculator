@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.mercury.context.SpringContext"/>
+
+	<bean id="armcal" class="com.mercury.service.ARMCal">
+	</bean>
+	
+	<bean id="fixedrateCal" class="com.mercury.service.FixedrateCal">
+	</bean>
+	
+	<bean id="helloService1" class="com.mercury.service.HelloService">
+    	<property name="hd" ref="helloDao"/>
+    </bean>
+    
+    <bean id="sendEmail" class="com.mercury.service.SendEmail"></bean>
+
+</beans>
